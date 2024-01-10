@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import { gibson } from '@/styles/font'
+import '../styles/tailwind.css'
+import clsx from 'clsx'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={clsx(gibson.className, "relative")}>{children}</body>
     </html>
   )
 }
